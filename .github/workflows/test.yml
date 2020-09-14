@@ -10,4 +10,5 @@ jobs:
       - uses: cachix/install-nix-action@v10
         with:
           extra_nix_config: "system-features = nixos-test benchmark big-parallel kvm"
+      - run: nix show-config
       - run: nix-build
